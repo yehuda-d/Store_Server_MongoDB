@@ -27,10 +27,13 @@ app.get('/api', (req, res) => {
 const categoryRoutes = require('./routes/category_R');
 const userRoutes = require('./routes/user_R');
 const productRoutes = require('./routes/product_R');
+const orderRoutes = require('./routes/order_R');
 
 app.use('/api/categories', categoryRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/orders', orderRoutes);
+
 
 // הפעלת השרת
 const PORT = process.env.PORT || 3005;
